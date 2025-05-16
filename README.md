@@ -1,5 +1,6 @@
-🧠 Resume Category Classification — Project Explanation
-📌 Objective:
+#🧠 Resume Category Classification — Project Explanation
+#📌 Objective:
+
 To develop a web-based machine learning application that:
 
 Accepts resumes in .pdf or .txt format.
@@ -10,17 +11,17 @@ Predicts the job category of the resume using a trained Random Forest classifier
 
 Optionally extracts named entities (skills, contact info) for better interpretability.
 
-📂 Dataset Overview
+#📂 Dataset Overview
 We used a labeled resume dataset commonly available on Kaggle (e.g., "Resume Dataset with Multi-Class Labels").
 
-✅ Format:
+#✅ Format:
 Each sample consists of:
 
-Category: The job domain label (e.g., Data Science, HR, Software Engineer, Advocate, etc.)
+**Category:** The job domain label (e.g., Data Science, HR, Software Engineer, Advocate, etc.)
 
-Resume: The text content of the resume
+**Resume:** The text content of the resume
 
-📊 Sample Categories:
+#📊 Sample Categories:
 Category	Example Keywords
 Data Science	Python, ML, Deep Learning
 HR	Recruitment, Payroll, Onboarding
@@ -28,14 +29,14 @@ Web Developer	HTML, CSS, JavaScript
 Software Engineer	Java, C++, Algorithms
 Advocate	Legal, Law, Court
 
-📈 Dataset Stats:
+#📈 Dataset Stats:
 Total Samples: ~960 resumes
 
 Total Categories: 25+
 
 Languages: English
 
-🔍 Data Preprocessing
+#🔍 Data Preprocessing
 We followed a clear pipeline:
 
 Cleaning Text:
@@ -64,7 +65,7 @@ Accuracy: ~92% on validation set
 
 Saved models: resume_category_model.pkl and tfidf_vectorizer.pkl
 
-🔧 Web App Functionality
+#🔧 Web App Functionality
 Upload:
 Users can upload resumes in .txt or .pdf format.
 
@@ -74,7 +75,7 @@ PyMuPDF (fitz) for PDFs
 
 open() for text files
 
-Prediction:
+#Prediction:
 Text is preprocessed and vectorized using the saved TF-IDF model.
 
 Category is predicted using the Random Forest model.
@@ -88,7 +89,7 @@ Emails
 
 Phone numbers
 
-⚙️ Core Components
+#⚙️ Core Components
 File	Description
 app.py	Main Flask backend
 templates/index.html	Frontend to upload and view results
@@ -98,7 +99,7 @@ resume_category_model.pkl	Trained model
 tfidf_vectorizer.pkl	TF-IDF vectorizer
 
 ----------------------------------------------
-📈 Sample Output:
+#📈 Sample Output:
 
 📄 Uploaded Resume: John_Data_Scientist.pdf
 
@@ -114,18 +115,10 @@ tfidf_vectorizer.pkl	TF-IDF vectorizer
 📞 Phone: +1-234-567-8900
 
 ----------------------------------------------
-🚀 Deployment Suggestions
+#🚀 Deployment Suggestions
 You can deploy the project using:
 
 Frontend (static): Netlify or GitHub Pages
 
 Backend (Flask): Render, Railway, or Heroku
 
-🌟 Improvements To Consider
-Add resume scoring (based on job match)
-
-Use BERT instead of TF-IDF + Random Forest
-
-Add admin dashboard to manage predictions
-
-Connect a job description input for real-time job-resume match
